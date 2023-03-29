@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title%}Les produits{% endblock %}</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+   
+  
+
+   {% block body%}
+      <h1>Liste des produits</h1>
+      <ul>
+    {% for product in products %}
+            <h2><li>{{product}}</li></h2> 
+     {% endfor %} 
+     </ul>      
+   {% endblock %}
+{{ dump(products) }}
+</body>
+</html>
